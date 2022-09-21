@@ -11,19 +11,24 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="wwwroot\" />
-    <Folder Include="Views\Shop-List\" />
-    <Folder Include="Views\Shop-Product\" />
-    <Folder Include="Views\Shop-Cart\" />
-    <Folder Include="Views\Shop-Compare\" />
-    <Folder Include="Views\Vendors\" />
-    <Folder Include="Views\Vendor-Details\" />
+    <Folder Include="Views\Shop\" />
+    <Folder Include="DAL\" />
   </ItemGroup>
   <ItemGroup>
-    <None Remove="Views\Shop-List\" />
-    <None Remove="Views\Shop-Product\" />
-    <None Remove="Views\Shop-Cart\" />
-    <None Remove="Views\Shop-Compare\" />
-    <None Remove="Views\Vendors\" />
-    <None Remove="Views\Vendor-Details\" />
+    <None Remove="Microsoft.EntityFrameworkCore" />
+    <None Remove="Microsoft.EntityFrameworkCore.Tools" />
+    <None Remove="NuGet.PackageManagement" />
+    <None Remove="Views\Shop\" />
+    <None Remove="DAL\" />
+    <None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.9">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="NuGet.PackageManagement" Version="6.3.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.9" />
   </ItemGroup>
 </Project>

@@ -31,28 +31,28 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/duyguhasanzade/Desktop/nest/nest/nest/Views/Shop-Cart/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hvcC1DYXJ0L0luZGV4LmNzaHRtbA==
+[/Users/duyguhasanzade/Desktop/nest/nest/nest/Views/Shop/Cart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hvcC9DYXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/duyguhasanzade/Desktop/nest/nest/nest/Views/Shop-Compare/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hvcC1Db21wYXJlL0luZGV4LmNzaHRtbA==
+[/Users/duyguhasanzade/Desktop/nest/nest/nest/Views/Shop/Compare.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hvcC9Db21wYXJlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/duyguhasanzade/Desktop/nest/nest/nest/Views/Shop-List/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hvcC1MaXN0L0luZGV4LmNzaHRtbA==
+[/Users/duyguhasanzade/Desktop/nest/nest/nest/Views/Shop/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hvcC9MaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/duyguhasanzade/Desktop/nest/nest/nest/Views/Shop-Product/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hvcC1Qcm9kdWN0L0luZGV4LmNzaHRtbA==
+[/Users/duyguhasanzade/Desktop/nest/nest/nest/Views/Shop/Product.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hvcC9Qcm9kdWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/duyguhasanzade/Desktop/nest/nest/nest/Views/Vendor-Details/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVmVuZG9yLURldGFpbHMvSW5kZXguY3NodG1s
+[/Users/duyguhasanzade/Desktop/nest/nest/nest/Views/Vendor/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVmVuZG9yL0RldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/duyguhasanzade/Desktop/nest/nest/nest/Views/Vendors/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVmVuZG9ycy9JbmRleC5jc2h0bWw=
+[/Users/duyguhasanzade/Desktop/nest/nest/nest/Views/Vendor/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVmVuZG9yL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/duyguhasanzade/Desktop/nest/nest/nest/Views/_ViewImports.cshtml]

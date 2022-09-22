@@ -6,14 +6,15 @@ namespace nest.DAL
 {
 	public class NestContext:DbContext
 
-	{
-		public NestContext(DbContextOptions<NestContext> options):base(options)
-		{
-
-		}
-
-		public DbSet<Product> Products { get; set; }
+    {
+	
+    
+        public NestContext(DbContextOptions<NestContext> options) : base(options)
+        {
+        }
+        public DbSet<Product> Products { get; set; }
         public DbSet<Badge> Badges { get; set; }
+        public DbSet<Slider> Sliders { get; set; }
     }
 }
 

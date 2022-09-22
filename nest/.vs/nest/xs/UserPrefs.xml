@@ -2,30 +2,54 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.nest PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="nest/Controllers/HomeController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="nest/Views/Home/Index.cshtml">
     <Files>
-      <File FileName="nest/Program.cs" Line="1" Column="1" />
+      <File FileName="nest/Program.cs" />
       <File FileName="nest/Models/ErrorViewModel.cs" Line="1" Column="1" />
-      <File FileName="nest/Views/Shared/_Layout.cshtml" Line="795" Column="34" />
-      <File FileName="nest/Views/Home/Index.cshtml" Line="3" Column="2" />
-      <File FileName="nest/Views/Shop-list/Index.cshtml" Line="602" Column="8" />
-      <File FileName="nest/Views/Shared/_ValidationScriptsPartial.cshtml" Line="1" Column="1" />
-      <File FileName="nest/Controllers/HomeController.cs" Line="1" Column="1" />
+      <File FileName="nest/Views/Shared/_Layout.cshtml" />
+      <File FileName="nest/Views/Home/Index.cshtml" Line="13" Column="28" />
+      <File FileName="nest/Views/Shared/_ValidationScriptsPartial.cshtml" />
+      <File FileName="nest/Controllers/HomeController.cs" Line="25" Column="25" />
+      <File FileName="nest/Controllers/ShopController.cs" Line="1" Column="1" />
+      <File FileName="nest/Controllers/VendorController.cs" Line="1" Column="1" />
+      <File FileName="nest/DAL/NestContext.cs" Line="16" Column="49" />
+      <File FileName="nest/appsettings.json" Line="14" Column="1" />
+      <File FileName="nest/Models/Product.cs" />
+      <File FileName="nest/Models/BaseEntity.cs" />
+      <File FileName="nest/Models/Badge.cs" Line="13" Column="1" />
+      <File FileName="nest/Models/Slider.cs" Line="13" Column="1" />
+      <File FileName="nest/Views/Shop/Cart.cshtml" Line="2" Column="30" />
+      <File FileName="nest/Views/Shop/Compare.cshtml" Line="2" Column="33" />
+      <File FileName="nest/Views/Shop/List.cshtml" Line="2" Column="30" />
+      <File FileName="nest/Views/Shop/Product.cshtml" Line="2" Column="33" />
+      <File FileName="nest/Views/Vendor/Details.cshtml" Line="2" Column="47" />
+      <File FileName="nest/Views/Vendor/Index.cshtml" Line="2" Column="32" />
+      <File FileName="nest/Views/Shared/Error.cshtml" Line="1" Column="1" />
+      <File FileName="nest/ViewModels/HomeVM.cs" Line="12" Column="1" />
+      <File FileName="nest/Views/_ViewImports.cshtml" Line="6" Column="1" />
+      <File FileName="nest/Views/_ViewStart.cshtml" Line="1" Column="1" />
+      <File FileName="nest/Migrations/20220922182726_CreatedSliderTable.cs" Line="16" Column="1" />
+      <File FileName="nest/Migrations/NestContextModelSnapshot.cs" Line="1" Column="1" />
+      <File FileName="nest/Migrations/20220922101128_Initial.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="nest" expanded="True">
             <Node name="nest" expanded="True">
-              <Node name="Controllers" expanded="True">
-                <Node name="HomeController.cs" selected="True" />
-              </Node>
+              <Node name="Controllers" expanded="True" />
+              <Node name="DAL" expanded="True" />
+              <Node name="Migrations" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="ViewModels" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Home" expanded="True" />
-                <Node name="Shared" expanded="True" />
-                <Node name="Shop-list" expanded="True" />
+                <Node name="Home" expanded="True">
+                  <Node name="Index.cshtml" selected="True" />
+                </Node>
               </Node>
             </Node>
           </Node>

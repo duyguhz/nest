@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using nest.DAL;
 
@@ -11,9 +12,10 @@ using nest.DAL;
 namespace nest.Migrations
 {
     [DbContext(typeof(NestContext))]
-    partial class NestContextModelSnapshot : ModelSnapshot
+    [Migration("20220923105933_CreatedSliderTablee")]
+    partial class CreatedSliderTablee
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -43,33 +45,6 @@ namespace nest.Migrations
                     b.ToTable("Badges");
                 });
 
-            modelBuilder.Entity("nest.Models.Category", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<string>("ImageUrl")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTime?>("Modified")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Categories");
-                });
-
             modelBuilder.Entity("nest.Models.Product", b =>
                 {
                     b.Property<int>("Id")
@@ -79,9 +54,6 @@ namespace nest.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<int?>("BadgeId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("CategoryId")
                         .HasColumnType("int");
 
                     b.Property<decimal>("CostPrice")
@@ -131,8 +103,6 @@ namespace nest.Migrations
 
                     b.HasIndex("BadgeId");
 
-                    b.HasIndex("CategoryId");
-
                     b.ToTable("Products");
                 });
 
@@ -169,22 +139,9 @@ namespace nest.Migrations
                     b.HasOne("nest.Models.Badge", null)
                         .WithMany("Products")
                         .HasForeignKey("BadgeId");
-
-                    b.HasOne("nest.Models.Category", "Category")
-                        .WithMany("Products")
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Category");
                 });
 
             modelBuilder.Entity("nest.Models.Badge", b =>
-                {
-                    b.Navigation("Products");
-                });
-
-            modelBuilder.Entity("nest.Models.Category", b =>
                 {
                     b.Navigation("Products");
                 });

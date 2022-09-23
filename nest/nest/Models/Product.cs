@@ -17,6 +17,8 @@ namespace nest.Models
 		public int LifeDay { get; set; }
 		public int StockCount { get; set; }
 		public string Description { get; set; }
+		public int CategoryId { get; set; }
+		public Category Category { get; set; }
 
 	}
 }

@@ -56,6 +56,10 @@
             "NuGet.PackageManagement": {
               "target": "Package",
               "version": "[6.3.0, )"
+            },
+            "Z.EntityFramework.Plus.EFCore": {
+              "target": "Package",
+              "version": "[6.15.0, )"
             }
           },
           "imports": [

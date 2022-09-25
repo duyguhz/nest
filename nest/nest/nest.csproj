@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <Content Remove="wwwroot\" />
+    <Content Remove="Views\Vendor\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="wwwroot\" />
@@ -23,6 +24,7 @@
     <None Remove="DAL\" />
     <None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
     <None Remove="ViewModels\" />
+    <None Remove="Z.EntityFramework.Plus.EFCore" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.9" />
@@ -32,5 +34,12 @@
     </PackageReference>
     <PackageReference Include="NuGet.PackageManagement" Version="6.3.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.9" />
+    <PackageReference Include="Z.EntityFramework.Plus.EFCore" Version="6.15.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Views\Vendor\Index.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Compile>
   </ItemGroup>
 </Project>

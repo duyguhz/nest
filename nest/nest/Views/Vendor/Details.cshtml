@@ -1,26 +1,26 @@
 ﻿@{
-    ViewData["Title"] = " Vendor Detail Page";
+    ViewData["Title"] = "Vendor Details";
 }
+@model Vendor
 <main class="main">
     <div class="page-header breadcrumb-wrap">
         <div class="container">
             <div class="breadcrumb">
-                <a href="index.html" rel="nofollow"><i class="fi-rs-home mr-5"></i>Home</a>
-                <span></span> Store <span></span> Nest Food
+                <span></span> Satıcı <span></span> @Model.Name
             </div>
         </div>
     </div>
     <div class="container mb-30">
-        <div class="archive-header-3 mt-30 mb-80" style="background-image: url(assets/imgs/vendor/vendor-header-bg.png)">
+        <div class="archive-header-3 mt-30 mb-80" style="background-image: url(../../assets/imgs/vendor/@Model.BackgroundImageUrl); background-position:center;background-size:100%">
             <div class="archive-header-3-inner">
                 <div class="vendor-logo mr-50">
-                    <img src="assets/imgs/vendor/vendor-17.png" alt="" />
+                    <img src="~/assets/imgs/vendor/@Model.ProfileImageUrl" alt="" />
                 </div>
                 <div class="vendor-content">
                     <div class="product-category">
-                        <span class="text-muted">Since 2012</span>
+                        <span class="text-muted">Since @Model.CreatedYear</span>
                     </div>
-                    <h3 class="mb-5 text-white"><a href="vendor-details-1.html" class="text-white">Nest Food.,Ltd</a></h3>
+                    <h3 class="mb-5 text-white"><a href="vendor-details-1.html" class="text-white">@Model.Name</a></h3>
                     <div class="product-rate-cover mb-15">
                         <div class="product-rate d-inline-block">
                             <div class="product-rating" style="width: 90%"></div>
@@ -31,14 +31,14 @@
                     <div class="row">
                         <div class="col-lg-4">
                             <div class="vendor-des mb-15">
-                                <p class="font-sm text-white">Got a smooth, buttery spread in your fridge? Chances are good that it's Good Chef. This brand made Lionto's list of the most popular grocery brands across the country.</p>
+                                <p class="font-sm text-white">@Model.Description<p>
                             </div>
                         </div>
                         <div class="col-lg-3">
                             <div class="vendor-info text-white mb-15">
                                 <ul class="font-sm">
-                                    <li><img class="mr-5" src="assets/imgs/theme/icons/icon-location.svg" alt="" /><strong>Address: </strong> <span>5171 W Campbell Ave undefined, Utah 53127 United States</span></li>
-                                    <li><img class="mr-5" src="assets/imgs/theme/icons/icon-contact.svg" alt="" /><strong>Call Us:</strong><span>(+91) - 540-025-124553</span></li>
+                                    <li><img class="mr-5" src="~/assets/imgs/theme/icons/icon-location.svg" alt="" /><strong>Address: </strong> <span>@Model.Address</span></li>
+                                    <li><img class="mr-5" src="~/assets/imgs/theme/icons/icon-contact.svg" alt="" /><strong>Call Us:</strong><span>@Model.Number</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -48,22 +48,22 @@
                                 <ul class="social-network">
                                     <li class="hover-up">
                                         <a href="#">
-                                            <img src="assets/imgs/theme/icons/social-tw.svg" alt="" />
+                                            <img src="~/assets/imgs/theme/icons/social-tw.svg" alt="" />
                                         </a>
                                     </li>
                                     <li class="hover-up">
                                         <a href="#">
-                                            <img src="assets/imgs/theme/icons/social-fb.svg" alt="" />
+                                            <img src="~/assets/imgs/theme/icons/social-fb.svg" alt="" />
                                         </a>
                                     </li>
                                     <li class="hover-up">
                                         <a href="#">
-                                            <img src="assets/imgs/theme/icons/social-insta.svg" alt="" />
+                                            <img src="~/assets/imgs/theme/icons/social-insta.svg" alt="" />
                                         </a>
                                     </li>
                                     <li class="hover-up">
                                         <a href="#">
-                                            <img src="assets/imgs/theme/icons/social-pin.svg" alt="" />
+                                            <img src="~/assets/imgs/theme/icons/social-pin.svg" alt="" />
                                         </a>
                                     </li>
                                 </ul>
@@ -126,8 +126,8 @@
                             <div class="product-img product-img-zoom">
                                 <div class="product-img-inner">
                                     <a href="shop-product-right.html">
-                                        <img class="default-img" src="assets/imgs/shop/product-2-1.jpg" alt="" />
-                                        <img class="hover-img" src="assets/imgs/shop/product-2-2.jpg" alt="" />
+                                        <img class="default-img" src="~/assets/imgs/shop/product-2-1.jpg" alt="" />
+                                        <img class="hover-img" src="~/assets/imgs/shop/product-2-2.jpg" alt="" />
                                     </a>
                                 </div>
                             </div>
@@ -171,8 +171,8 @@
                             <div class="product-img product-img-zoom">
                                 <div class="product-img-inner">
                                     <a href="shop-product-right.html">
-                                        <img class="default-img" src="assets/imgs/shop/product-3-1.jpg" alt="" />
-                                        <img class="hover-img" src="assets/imgs/shop/product-3-2.jpg" alt="" />
+                                        <img class="default-img" src="~/assets/imgs/shop/product-3-1.jpg" alt="" />
+                                        <img class="hover-img" src="~/assets/imgs/shop/product-3-2.jpg" alt="" />
                                     </a>
                                 </div>
                             </div>
@@ -216,8 +216,8 @@
                             <div class="product-img product-img-zoom">
                                 <div class="product-img-inner">
                                     <a href="shop-product-right.html">
-                                        <img class="default-img" src="assets/imgs/shop/product-4-1.jpg" alt="" />
-                                        <img class="hover-img" src="assets/imgs/shop/product-4-2.jpg" alt="" />
+                                        <img class="default-img" src="~/assets/imgs/shop/product-4-1.jpg" alt="" />
+                                        <img class="hover-img" src="~/assets/imgs/shop/product-4-2.jpg" alt="" />
                                     </a>
                                 </div>
                             </div>
@@ -261,8 +261,8 @@
                             <div class="product-img product-img-zoom">
                                 <div class="product-img-inner">
                                     <a href="shop-product-right.html">
-                                        <img class="default-img" src="assets/imgs/shop/product-5-1.jpg" alt="" />
-                                        <img class="hover-img" src="assets/imgs/shop/product-5-2.jpg" alt="" />
+                                        <img class="default-img" src="~/assets/imgs/shop/product-5-1.jpg" alt="" />
+                                        <img class="hover-img" src="~/assets/imgs/shop/product-5-2.jpg" alt="" />
                                     </a>
                                 </div>
                             </div>
@@ -303,8 +303,8 @@
                             <div class="product-img product-img-zoom">
                                 <div class="product-img-inner">
                                     <a href="shop-product-right.html">
-                                        <img class="default-img" src="assets/imgs/shop/product-6-1.jpg" alt="" />
-                                        <img class="hover-img" src="assets/imgs/shop/product-6-2.jpg" alt="" />
+                                        <img class="default-img" src="~/assets/imgs/shop/product-6-1.jpg" alt="" />
+                                        <img class="hover-img" src="~/assets/imgs/shop/product-6-2.jpg" alt="" />
                                     </a>
                                 </div>
                             </div>
@@ -376,7 +376,7 @@
                                 <div class="product-img-action-wrap">
                                     <div class="product-img">
                                         <a href="shop-product-right.html">
-                                            <img src="assets/imgs/banner/banner-5.png" alt="" />
+                                            <img src="~/assets/imgs/banner/banner-5.png" alt="" />
                                         </a>
                                     </div>
                                 </div>
@@ -413,7 +413,7 @@
                                 <div class="product-img-action-wrap">
                                     <div class="product-img">
                                         <a href="shop-product-right.html">
-                                            <img src="assets/imgs/banner/banner-6.png" alt="" />
+                                            <img src="~/assets/imgs/banner/banner-6.png" alt="" />
                                         </a>
                                     </div>
                                 </div>
@@ -450,7 +450,7 @@
                                 <div class="product-img-action-wrap">
                                     <div class="product-img">
                                         <a href="shop-product-right.html">
-                                            <img src="assets/imgs/banner/banner-7.png" alt="" />
+                                            <img src="~/assets/imgs/banner/banner-7.png" alt="" />
                                         </a>
                                     </div>
                                 </div>
@@ -487,7 +487,7 @@
                                 <div class="product-img-action-wrap">
                                     <div class="product-img">
                                         <a href="shop-product-right.html">
-                                            <img src="assets/imgs/banner/banner-8.png" alt="" />
+                                            <img src="~/assets/imgs/banner/banner-8.png" alt="" />
                                         </a>
                                     </div>
                                 </div>
@@ -525,26 +525,26 @@
             </div>
             <div class="col-lg-1-5 primary-sidebar sticky-sidebar">
                 <div class="banner-img mb-30">
-                    <img src="assets/imgs/banner/banner-10.jpg" alt="" />
+                    <img src="~/assets/imgs/banner/banner-10.jpg" alt="" />
                 </div>
 
                 <div class="sidebar-widget widget-category-2 mb-30">
                     <h5 class="section-title style-1 mb-30">Category</h5>
                     <ul>
                         <li>
-                            <a href="shop-grid-right.html"> <img src="assets/imgs/theme/icons/category-1.svg" alt="" />Milks & Dairies</a><span class="count">30</span>
+                            <a href="shop-grid-right.html"> <img src="~/assets/imgs/theme/icons/category-1.svg" alt="" />Milks & Dairies</a><span class="count">30</span>
                         </li>
                         <li>
-                            <a href="shop-grid-right.html"> <img src="assets/imgs/theme/icons/category-2.svg" alt="" />Clothing</a><span class="count">35</span>
+                            <a href="shop-grid-right.html"> <img src="~/assets/imgs/theme/icons/category-2.svg" alt="" />Clothing</a><span class="count">35</span>
                         </li>
                         <li>
-                            <a href="shop-grid-right.html"> <img src="assets/imgs/theme/icons/category-3.svg" alt="" />Pet Foods </a><span class="count">42</span>
+                            <a href="shop-grid-right.html"> <img src="~/assets/imgs/theme/icons/category-3.svg" alt="" />Pet Foods </a><span class="count">42</span>
                         </li>
                         <li>
-                            <a href="shop-grid-right.html"> <img src="assets/imgs/theme/icons/category-4.svg" alt="" />Baking material</a><span class="count">68</span>
+                            <a href="shop-grid-right.html"> <img src="~/assets/imgs/theme/icons/category-4.svg" alt="" />Baking material</a><span class="count">68</span>
                         </li>
                         <li>
-                            <a href="shop-grid-right.html"> <img src="assets/imgs/theme/icons/category-5.svg" alt="" />Fresh Fruit</a><span class="count">87</span>
+                            <a href="shop-grid-right.html"> <img src="~/assets/imgs/theme/icons/category-5.svg" alt="" />Fresh Fruit</a><span class="count">87</span>
                         </li>
                     </ul>
                 </div>
@@ -590,7 +590,7 @@
                 </div>
 
                 <div class="banner-img wow fadeIn mb-lg-0 animated d-lg-block d-none">
-                    <img src="assets/imgs/banner/banner-11.png" alt="" />
+                    <img src="~/assets/imgs/banner/banner-11.png" alt="" />
                     <div class="banner-text">
                         <span>Oganic</span>
                         <h4>
@@ -604,4 +604,3 @@
         </div>
     </div>
 </main>
-

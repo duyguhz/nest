@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.EntityFrameworkCore;
 using nest.Models;
 
 namespace nest.ViewModels
@@ -7,6 +8,7 @@ namespace nest.ViewModels
 	{
 		public IEnumerable<Slider> Sliders { get; set; }
 		public IEnumerable<Category> Categories { get; set; }
-	}
+        public IEnumerable<Product> Products { get; set; }
+    }
 }
 

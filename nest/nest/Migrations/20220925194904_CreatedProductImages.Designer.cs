@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using nest.DAL;
 
@@ -11,9 +12,10 @@ using nest.DAL;
 namespace nest.Migrations
 {
     [DbContext(typeof(NestContext))]
-    partial class NestContextModelSnapshot : ModelSnapshot
+    [Migration("20220925194904_CreatedProductImages")]
+    partial class CreatedProductImages
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

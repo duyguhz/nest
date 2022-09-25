@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using nest.DAL;
 
@@ -11,9 +12,10 @@ using nest.DAL;
 namespace nest.Migrations
 {
     [DbContext(typeof(NestContext))]
-    partial class NestContextModelSnapshot : ModelSnapshot
+    [Migration("20220925191359_b")]
+    partial class b
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -78,7 +80,7 @@ namespace nest.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("BadgeId")
+                    b.Property<int?>("BadgeId")
                         .HasColumnType("int");
 
                     b.Property<int>("CategoryId")
@@ -87,7 +89,7 @@ namespace nest.Migrations
                     b.Property<decimal>("CostPrice")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<string>("Desription")
+                    b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -127,7 +129,7 @@ namespace nest.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("VendorId")
+                    b.Property<int?>("VendorId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -139,31 +141,6 @@ namespace nest.Migrations
                     b.HasIndex("VendorId");
 
                     b.ToTable("Products");
-                });
-
-            modelBuilder.Entity("nest.Models.ProductImage", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<string>("ImageUrl")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int");
-
-                    b.Property<bool?>("Status")
-                        .HasColumnType("bit");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ProductId");
-
-                    b.ToTable("ProductImages");
                 });
 
             modelBuilder.Entity("nest.Models.Slider", b =>
@@ -242,11 +219,9 @@ namespace nest.Migrations
 
             modelBuilder.Entity("nest.Models.Product", b =>
                 {
-                    b.HasOne("nest.Models.Badge", "Badge")
+                    b.HasOne("nest.Models.Badge", null)
                         .WithMany("Products")
-                        .HasForeignKey("BadgeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("BadgeId");
 
                     b.HasOne("nest.Models.Category", "Category")
                         .WithMany("Products")
@@ -254,28 +229,11 @@ namespace nest.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("nest.Models.Vendor", "Vendor")
+                    b.HasOne("nest.Models.Vendor", null)
                         .WithMany("Products")
-                        .HasForeignKey("VendorId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Badge");
+                        .HasForeignKey("VendorId");
 
                     b.Navigation("Category");
-
-                    b.Navigation("Vendor");
-                });
-
-            modelBuilder.Entity("nest.Models.ProductImage", b =>
-                {
-                    b.HasOne("nest.Models.Product", "Product")
-                        .WithMany("ProductImages")
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Product");
                 });
 
             modelBuilder.Entity("nest.Models.Badge", b =>
@@ -286,11 +244,6 @@ namespace nest.Migrations
             modelBuilder.Entity("nest.Models.Category", b =>
                 {
                     b.Navigation("Products");
-                });
-
-            modelBuilder.Entity("nest.Models.Product", b =>
-                {
-                    b.Navigation("ProductImages");
                 });
 
             modelBuilder.Entity("nest.Models.Vendor", b =>
